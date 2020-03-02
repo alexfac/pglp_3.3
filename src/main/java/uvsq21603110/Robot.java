@@ -3,21 +3,35 @@ package uvsq21603110;
 
 import java.util.ArrayList;
 
-public class Robot {
-    public int position;
-    public int direction;
-    private ArrayList<Robot> RobotList;
+public class Robot extends AbstractRobot{
 
-    public Robot(int position, int direction){
-        this.position = position;
-        this.direction = direction;
-    }
+   public Robot(){
+       super();
+   }
 
     public void tourne(){
-        this.position += 90;
+       if(this.direction == 0)
+           this.direction = 0;
+       else if(this.direction == 90)
+           this.direction = 90;
+       else if(this.direction == 180)
+           this.direction = 180;
+       else if(this.direction == 270)
+           this.direction = 270;
+       else System.out.println("Entrer 0, 90, 180 ou 270");
     }
+
+    @Override
     public void avance(){
-        this.position += 1;
+        if(this.direction == 0)
+            position.y += 1;
+        else if(this.direction == 90)
+            position.x += 1;
+        else if(this.direction == 180)
+            position.y -= 1;
+        else if(this.direction == 270)
+            position.x -= 1;
+
     }
 
     public void avancerTous(ArrayList <Robot>RobotList){

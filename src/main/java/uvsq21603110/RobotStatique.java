@@ -1,9 +1,9 @@
 package uvsq21603110;
 
-public class RobotStatique extends Robot{
+public class RobotStatique extends AbstractRobot{
 
-    public RobotStatique(int position, int direction) {
-        super(position, direction);
+    public RobotStatique() {
+        super();
     }
 
     @Override
