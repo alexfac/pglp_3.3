@@ -4,6 +4,10 @@ import java.util.ArrayList;
 
 public class RobotList {
 
+    public ArrayList<AbstractRobot> getRobotlist() {
+        return robotlist;
+    }
+
     ArrayList<AbstractRobot> robotlist;
 
     public RobotList(){
