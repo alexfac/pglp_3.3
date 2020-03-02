@@ -41,4 +41,10 @@ public class AppTest
         assertTrue(l.get(0).position.y == p.y && l.get(0).position.x == p.x);
         assertTrue(l.get(1).position.y == p.y && l.get(1).position.x == p.x);
     }
+
+    @Test(expected = UnsupportedOperationException.class)
+    public void testStatique(){
+        RobotStatique r = new RobotStatique();
+        r.avance();
+    }
 }
